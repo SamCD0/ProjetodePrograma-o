@@ -146,7 +146,7 @@ def procurar_livro(): #<-sistema de busca de livros
     procura = procura.lower() #deixa o que for escrito minusculo
     encontrados = [
         livro for livro in livros
-        if procura in livro["tituloz"].lower() or procura in livro["autor"].lower()
+        if procura in livro["tituloz"].lower() or procura in livro["autor"].lower() #o .lower foi utilizado para facilitar a procura, deixando os nomes em letra minuscula
     ]
 
     if len(encontrados) == 0: #se não achar livros, volta
